@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FORMA | Architectural Concrete — Modern, minimal and premium concrete planters and custom architectural designs in Dar es Salaam, Tanzania.">
+<meta name="theme-color" content="#173b2d">
+<title>FORMA | Architectural Concrete</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:#f5f3ee;color:#18221d;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,92%);margin:auto}
+.nav{position:absolute;top:0;left:0;width:100%;z-index:10;padding:22px 0;color:#fff}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:3px;font-size:20px}
+.nav-links{display:flex;gap:24px;font-size:13px;letter-spacing:1px}
+.hero{min-height:100svh;background:linear-gradient(135deg,#173b2d 0%,#214c3a 55%,#10281f 100%);color:#fff;display:flex;align-items:center;padding:90px 0 60px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:500px;height:500px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-170px;bottom:-190px}
+.hero-content{max-width:800px}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#cbd8d0}
+.hero h1{font-size:clamp(52px,10vw,105px);line-height:.9;letter-spacing:-5px;margin:22px 0}
+.hero h1 span{font-weight:300}
+.hero p{max-width:650px;font-size:18px;color:#e3ebe6;margin:25px 0 30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border:1px solid #fff;border-radius:5px;font-weight:700;margin:5px 7px 5px 0;transition:.2s}
+.btn.primary{background:#fff;color:#173b2d}
+.btn:hover{transform:translateY(-2px)}
+section{padding:85px 0}
+.section-head{text-align:center;margin-bottom:45px}
+.section-head small{letter-spacing:3px;text-transform:uppercase;color:#6a786f;font-size:11px}
+.section-head h2{font-size:clamp(30px,5vw,46px);margin-top:8px;line-height:1.1}
+.intro{max-width:760px;margin:-10px auto 40px;text-align:center;color:#5c665f}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #ded9d0;padding:30px;min-height:180px}
+.card .num{font-size:12px;letter-spacing:2px;color:#8a958e}
+.card h3{margin:12px 0 8px;font-size:20px}
+.card p{color:#626b64;font-size:15px}
+.about{background:#e7e4dc}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about h2{font-size:clamp(32px,5vw,52px);line-height:1.05;margin:10px 0 18px}
+.about p{color:#515b54;font-size:17px}
+.points{display:grid;gap:15px}
+.point{background:rgba(255,255,255,.6);padding:20px;border:1px solid #d8d4cb}
+.point strong{display:block;margin-bottom:3px}
+.gallery{background:#faf9f6}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-item{background:#fff;border:1px solid #ded9d0;overflow:hidden;cursor:pointer}
+.gallery-item img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .35s}
+.gallery-item:hover img{transform:scale(1.025)}
+.gallery-caption{padding:12px 14px;font-size:12px;letter-spacing:.5px;color:#626b64}
+.loading{grid-column:1/-1;text-align:center;padding:50px;color:#6a746d}
+.contact{background:#173b2d;color:#fff;text-align:center}
+.contact .section-head small{color:#cbd8d0}
+.contact p{color:#dce5df;max-width:650px;margin:0 auto 25px}
+.social{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{background:#10281f;color:#b9c5be;text-align:center;padding:26px 15px;font-size:12px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:25px;z-index:100}
+.modal.open{display:flex}
+.modal img{max-height:88vh;max-width:94vw;object-fit:contain}
+.close{position:absolute;top:18px;right:22px;color:#fff;font-size:35px;cursor:pointer;line-height:1}
+@media(max-width:800px){
+ .nav-links{display:none}
+ .cards,.about-grid{grid-template-columns:1fr}
+ .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+ section{padding:65px 0}
+ .hero h1{letter-spacing:-3px}
+}
+@media(max-width:480px){
+ .gallery-grid{grid-template-columns:1fr}
+ .gallery-item img{aspect-ratio:3/4}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">FORMA</div>
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#collections">SERVICES</a>
+      <a href="#gallery">COLLECTION</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="eyebrow">Architectural Concrete · Dar es Salaam</div>
+      <h1>Modern.<br><span>Minimal.</span><br>Premium.</h1>
+      <p>Concrete planters and custom architectural designs made to elevate residential, commercial, hospitality and corporate spaces.</p>
+      <a class="btn primary" href="#gallery">View Collection</a>
+      <a class="btn" href="https://wa.me/255652984662?text=Hello%20FORMA%2C%20I%27m%20interested%20in%20your%20products." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      <a class="btn" href="https://www.instagram.com/forma.architectural.concrete/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<section id="collections">
+  <div class="wrap">
+    <div class="section-head">
+      <small>What we create</small>
+      <h2>Built around your space.</h2>
+    </div>
+    <p class="intro">FORMA combines clean architectural forms with concrete craftsmanship to create pieces that work naturally in contemporary interiors and exteriors.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="num">01</div>
+        <h3>Concrete Planters</h3>
+        <p>Modern planters for homes, apartments, hotels, offices, restaurants and outdoor spaces.</p>
+      </article>
+      <article class="card">
+        <div class="num">02</div>
+        <h3>Custom Designs</h3>
+        <p>Made-to-order shapes, dimensions, colours and finishes for individual projects and specifications.</p>
+      </article>
+      <article class="card">
+        <div class="num">03</div>
+        <h3>Project Solutions</h3>
+        <p>Suitable for homeowners, architects, real-estate developers, BnBs, hospitality and commercial projects.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head" style="text-align:left;margin-bottom:15px">
+        <small>About FORMA</small>
+        <h2>Designed for spaces that matter.</h2>
+      </div>
+      <p>FORMA | Architectural Concrete creates modern, minimal and premium concrete pieces with a focus on proportion, texture, clean form and contemporary spaces.</p>
+      <p style="margin-top:15px"><strong>Location:</strong> Dar es Salaam, Tanzania</p>
+    </div>
+    <div class="points">
+      <div class="point"><strong>Modern & Minimal</strong><span>Clean forms designed to complement contemporary architecture.</span></div>
+      <div class="point"><strong>Custom Made</strong><span>Sizes, colours and designs can be developed around your project.</span></div>
+      <div class="point"><strong>Residential & Commercial</strong><span>From a single home piece to larger hospitality and development projects.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <small>FORMA Collection</small>
+      <h2>Selected Works</h2>
+    </div>
+    <div id="galleryGrid" class="gallery-grid">
+      <div class="loading">Loading FORMA collection…</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <small>Start a project</small>
+      <h2>Let's create something distinctive.</h2>
+    </div>
+    <p>For orders, custom designs, project enquiries and collaborations, contact FORMA directly.</p>
+    <div class="social">
+      <a class="btn primary" href="https://wa.me/255652984662?text=Hello%20FORMA%2C%20I%27m%20interested%20in%20your%20products." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      <a class="btn" href="https://www.instagram.com/forma.architectural.concrete/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 FORMA | Architectural Concrete · Dar es Salaam, Tanzania</footer>
+
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="close" aria-label="Close">×</div>
+  <img id="modalImg" src="" alt="FORMA product">
+</div>
+
+<script>
+const owner="formaarchitecturalconcrete";
+const repo="Forma-architectural-concrete";
+const grid=document.getElementById("galleryGrid");
+
+async function loadGallery(){
+  try{
+    const response=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/`);
+    if(!response.ok) throw new Error("GitHub API error");
+    const files=await response.json();
+
+    const images=files.filter(file =>
+      file.type==="file" &&
+      /\.(jpg|jpeg|png|webp)$/i.test(file.name)
+    );
+
+    if(!images.length){
+      grid.innerHTML='<div class="loading">No product images found yet.</div>';
+      return;
+    }
+
+    grid.innerHTML="";
+    images.forEach((file,index)=>{
+      const item=document.createElement("article");
+      item.className="gallery-item";
+      const img=document.createElement("img");
+      img.loading="lazy";
+      img.src=file.download_url;
+      img.alt=`FORMA Architectural Concrete — Product ${index+1}`;
+      item.appendChild(img);
+
+      const caption=document.createElement("div");
+      caption.className="gallery-caption";
+      caption.textContent=`FORMA · Collection ${String(index+1).padStart(2,"0")}`;
+      item.appendChild(caption);
+
+      item.addEventListener("click",()=>{
+        document.getElementById("modalImg").src=file.download_url;
+        document.getElementById("modal").classList.add("open");
+      });
+      grid.appendChild(item);
+    });
+  }catch(error){
+    grid.innerHTML='<div class="loading">Collection could not be loaded. Please refresh the page.</div>';
+  }
+}
+
+function closeModal(){
+  document.getElementById("modal").classList.remove("open");
+  document.getElementById("modalImg").src="";
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+loadGallery();
+</script>
+
+</body>
+</html>
